@@ -25,3 +25,5 @@ Route::get('update-products', [ProductController::class, 'updateProduct']);
 
 //http://127.0.0.1:8000/thongtinsv
 Route::get('thongtinsv', [SinhVienController::class, 'showSv']);
+
+Route::get('queryBuilder', [ProductController::class, 'queryBuilder']);
