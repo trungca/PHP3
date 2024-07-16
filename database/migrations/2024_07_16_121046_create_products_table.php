@@ -8,22 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * reset passwork
      */
     public function up(): void
     {
-        Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->string('email')->primary();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::create('products', function (Blueprint $table) {
+            $table->increments('id'); //integer | unsugned | primary | auto increment
+            $table->string('name',200);
+            $table->float('price',8,2);
+            $table->integer('view');
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
      */
+    
+
     public function down(): void
     {
-        Schema::dropIfExists('password_reset_tokens');
+
     }
 };
